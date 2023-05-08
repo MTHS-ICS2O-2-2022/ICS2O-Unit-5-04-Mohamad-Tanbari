@@ -23,7 +23,7 @@ function checkQualification() {
   }
 
   // Check if it is tuesday or thursday
-  if (weekday == "tuesday" || weekday == "thursday") {
+  if (weekday == "Tuesday" || weekday == "Thursday") {
     document.getElementById("answer").innerHTML = "The museum is closed today."
   } else {
     document.getElementById("answer").innerHTML =
