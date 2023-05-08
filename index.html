@@ -1,87 +1,128 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-9" />
-  <meta name="description" content="You can pick what type of bread and how many loaves using this website" />
-  <meta name="keywords" content="mths, ics2o" />
-  <meta name="author" content="Mohamad" />
-  <meta name="viewport" conent="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.lime-green.min.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-  <link rel="manifest" href="site.webmanifest" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="./css/getmdl-select.min.css" />
-  <title>The bakery</title>
-</head>
-<body>
-  <script defer src="./js/getmdl-select.min.js"></script>
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <script src="./js/script.js"></script>
-  <!-- Always shows a header, even in smaller screens. -->
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">Bakery menu</span>
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>
-        <!-- Navigation. We hide it in small screens. -->
-        <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" href=""></a>
-          <a class="mdl-navigation__link" href=""></a>
-          <a class="mdl-navigation__link" href=""></a>
+  <head>
+    <meta charset="utf-9" />
+    <meta
+      name="description"
+      content="You can pick what type of bread and how many loaves using this website"
+    />
+    <meta name="keywords" content="mths, ics2o" />
+    <meta name="author" content="Mohamad" />
+    <meta name="viewport" conent="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.lime-green.min.css"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/getmdl-select.min.css" />
+    <title>The Museum</title>
+  </head>
+  <body>
+    <script defer src="./js/getmdl-select.min.js"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Museum Survey</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href=""></a>
+            <a class="mdl-navigation__link" href=""></a>
+            <a class="mdl-navigation__link" href=""></a>
+            <a class="mdl-navigation__link" href=""></a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Navigate</span>
+        <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href=""></a>
         </nav>
       </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">Navigate</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href=""></a>
-      </nav>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <!--Donut picture-->
+          <img src="./images/donut.png" alt="Donut" class="donut" />
+          <!--Text below header-->
+          <br />
+          <div class="page-content-top">
+            <h4>Please enter your age and the day of the week</h4>
+          </div>
+          <br />
+          <!-- User inputs -->
+          <!-- Numeric text field with floating point -->
+          <!-- Numeric Textfield with Floating Label -->
+          <form action="#">
+            <div
+              class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+            >
+              <input
+                class="mdl-textfield__input"
+                type="text"
+                pattern="-?[0-9]*(\.[0-9]+)?"
+                id="age"
+              />
+              <label class="mdl-textfield__label" for="age"
+                >Age...</label
+              >
+              <span class="mdl-textfield__error">Input is not a number!</span>
+            </div>
+          </form>
+          <br />
+          <br />
+          <!-- Simple Select -->
+          <div class="mdl-textfield mdl-js-textfield getmdl-select">
+            <input
+              type="text"
+              value=""
+              class="mdl-textfield__input"
+              id="weekday"
+              readonly
+            />
+            <input type="hidden" value="" name="weekday" />
+            <label for="weekday" class="mdl-textfield__label">Weekday</label>
+            <ul
+              for="weekday"
+              class="mdl-menu mdl-menu--bottom-left mdl-js-menu"
+            >
+              <li class="mdl-menu__item" data-val="monday">Monday</li>
+              <li class="mdl-menu__item" data-val="tuesday">Tuesday</li>
+              <li class="mdl-menu__item" data-val="wednesday">Wednesday</li>
+              <li class="mdl-menu__item" data-val="thursday">Thursday</li>
+              <li class="mdl-menu__item" data-val="friday">Friday</li>
+              <li class="mdl-menu__item" data-val="saturday">Saturday</li>
+              <li class="mdl-menu__item" data-val="sunday">Sunday</li>
+            </ul>
+          </div>
+          <br />
+          <br />
+          <!-- Accent-colored raised button with ripple -->
+          <button
+            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            onclick="checkQualification()"
+          >
+            Check Qualification
+          </button>
+          <br />
+          <br />
+          <!--Answer output from button-->
+          <div id="answer">The answer is ...</div>
+          <div id="answer2"></div>
+        </div>
+      </main>
     </div>
-    <main class="mdl-layout__content">
-      <div class="page-content">
-        <!--Donut picture-->
-        <img src="./images/donut.png" alt="Donut" class="donut" />
-        <!--Text below header-->
-        <br />
-        <div class="page-content-top">
-          <h4>Please enter your age and the day of the week</h4>
-        </div>
-        <br />
-        <!--Dropdown menu-->
-        <br>
-        <br>
-        <!-- Simple Select -->
-        <div class="mdl-textfield mdl-js-textfield getmdl-select">
-          <input type="text" value="" class="mdl-textfield__input" id="bread-type" readonly>
-          <input type="hidden" value="" name="bread-type">
-          <label for="bread-type" class="mdl-textfield__label">Bread Type</label>
-          <ul for="bread-type" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-            <li class="mdl-menu__item" data-val="WB">White bread</li>
-            <li class="mdl-menu__item" data-val="MGB">Multigrain bread</li>
-            <li class="mdl-menu__item" data-val="SDB">Sourdough bread</li>
-            <li class="mdl-menu__item" data-val="RB">Rye bread</li>
-          </ul>
-        </div>
-        <br />
-        <br />
-        <!-- Accent-colored raised button with ripple -->
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="calculate()">
-          Check out
-        </button>
-        <br />
-        <br />
-        <!--Answer output from button-->
-        <div id="answer">The answer is ...</div>
-        <div id="answer2"></div>
-      </div>
-    </main>
-  </div>
-</body>
+  </body>
 </html>
